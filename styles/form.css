@@ -1,22 +1,21 @@
 :root {
-  --primary-color: #8c8699; /* Light purple/grey from image */
-  --secondary-color: #f5f5f5; /* Background for fields/main */
-  --accent-color: #333333; /* Text color */
-  --header-footer-bg: #8c8699;
-  --button-bg: #e0e0e0; /* Light grey button */
-  --button-text: #333333; /* Dark text on button */
+  --page-background: #e0e7eb; /* Soft, very light blue-grey for body */
+  --form-elements-background: #d1d8e0; /* Slightly richer blue-grey for header, footer, main */
+  --accent-color: #2c3e50; /* Dark charcoal grey for text */
+  --button-bg: #98b0c8; /* Soft blue for buttons */
+  --button-text: #ffffff; /* White text on buttons */
 }
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
-  background: var(--primary-color); /* Use primary color for body background */
+  background: var(--page-background);
   color: var(--accent-color);
   margin: 0;
   padding: 0;
 }
 header {
-  background: var(--header-footer-bg);
-  color: #fff;
+  background: var(--form-elements-background);
+  color: var(--accent-color);
   text-align: center;
   padding: 1rem 0;
 }
@@ -27,7 +26,7 @@ h1 {
 main {
   max-width: 500px;
   margin: 2rem auto;
-  background: var(--secondary-color);
+  background: var(--form-elements-background);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -64,7 +63,7 @@ input[type="submit"] {
   margin-top: 1rem;
 }
 input[type="submit"]:hover {
-  background: #c0c0c0; /* Slightly darker grey on hover */
+  background: #7a93ac; /* Slightly darker blue on hover */
 }
 fieldset {
   border: 1px solid #ccc; /* Lighter border for fieldset */
@@ -112,7 +111,7 @@ input[type="radio"]::before {
   border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--primary-color); /* Inner dot color */
+  box-shadow: inset 1em 1em var(--form-elements-background); /* Inner dot color */
 }
 input[type="radio"]:checked::before {
   transform: scale(1);
@@ -126,7 +125,7 @@ input[type="checkbox"]::before {
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--primary-color); /* Inner checkmark color */
+  box-shadow: inset 1em 1em var(--form-elements-background); /* Inner checkmark color */
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 input[type="checkbox"]:checked::before {
@@ -173,7 +172,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .rating-group input[type="radio"]:checked {
-  border-color: var(--primary-color); /* Border color when checked */
+  border-color: var(--button-bg); /* Border color when checked */
 }
 
 .rating-group input[type="radio"]:checked::before {
@@ -181,7 +180,7 @@ input[type="checkbox"]:checked::before {
   display: block;
   width: 0.8em;
   height: 0.8em;
-  background-color: var(--primary-color); /* Inner dot color */
+  background-color: var(--button-bg); /* Inner dot color */
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -190,8 +189,8 @@ input[type="checkbox"]:checked::before {
 }
 
 footer {
-  background: var(--header-footer-bg);
-  color: #fff;
+  background: var(--form-elements-background);
+  color: var(--accent-color);
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
